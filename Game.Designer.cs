@@ -1,7 +1,7 @@
 ﻿
 namespace SnakeGame
 {
-    partial class Form1
+    partial class Game
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,7 +30,7 @@ namespace SnakeGame
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.FondoJuego = new System.Windows.Forms.Panel();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.Coords = new System.Windows.Forms.Label();

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SnakeGame
 {
-    public partial class Form1 : Form
+    public partial class Game : Form
     {
         static int movimiento = 35, posicionActual = 1, tamanoCola = 0;
         static Size tamanoBloques = new Size(35, 35);
@@ -18,7 +18,7 @@ namespace SnakeGame
         static Panel[] Serpiente = new Panel[100];
         static Point ultimoPunto, guardarPunto;
 
-        public Form1()
+        public Game()
         {
 
             //Timer.Start();
@@ -34,8 +34,7 @@ namespace SnakeGame
         {
             Fondo.Controls.Remove(MuertoTexto);
             posicionActual = 1;
-
-            
+ 
                 for(int i =0; i <= tamanoCola; i++)
                 {
                     Fondo.Controls.Remove(Serpiente[i]);
@@ -48,7 +47,6 @@ namespace SnakeGame
 
             Serpiente[0].Location = new Point(0, 0);
             Serpiente[0].BackColor = Color.Red;
-            Serpiente[0].BackgroundImage = SnakeGame.Properties.Resources.Kakyoin;
             Serpiente[0].Size = tamanoBloques;
 
             Fondo.Controls.Add(Serpiente[0]);
@@ -94,7 +92,6 @@ namespace SnakeGame
                 Serpiente[tamanoCola + 1] = new Panel();
                 Serpiente[tamanoCola + 1].Location = ultimoPunto;
                 Serpiente[tamanoCola + 1].BackColor = Color.Blue;
-                Serpiente[tamanoCola+1].BackgroundImage = SnakeGame.Properties.Resources.Kakyoin;
                 Serpiente[tamanoCola + 1].Size = tamanoBloques;
 
                 Fondo.Controls.Add(Serpiente[tamanoCola + 1]);
@@ -103,10 +100,7 @@ namespace SnakeGame
             }
         }
 
-        
-
         /*Temporizador que ejecuta el programa en bucle, evalua si la serpiente choca con los muros, si no, entonces sigue*/
-
         private void Timer_Tick(object sender, EventArgs e)
         {
             if ((Serpiente[0].Location.X == 315 && posicionActual == 3)
@@ -126,6 +120,7 @@ namespace SnakeGame
         }
 
         /*******  Funciones Botones  ******/
+
         private void arribaBtn_Click(object sender, EventArgs e)
         {
             if (Serpiente[1] == null && posicionActual != 1)

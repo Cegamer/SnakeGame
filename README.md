@@ -1,6 +1,7 @@
 # Snake Game 🐍
 
-Este es un clon un poco Bizarro del clasico juego de Snake
+Este es un clon un poco Bizarro del clasico juego de la serpiente.
+Basicamente el Juego de la serpiente en C# o Snake Game en C#
 
 ## Practica ✔️
 
